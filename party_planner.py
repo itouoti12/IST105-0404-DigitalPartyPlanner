@@ -76,20 +76,25 @@ def main():
         print("<h2>Please select party item options.</h2>")
     else:
         print("<h2>Available Party Items:</h2>")
-        print("")
+        print("<br/>")
         show_party_items()
-        print("")
+        print("<br/>")
         print(f"<strong>Enter item indices separated by commas(e.g.,0,2):{partyItemCsv}</strong>")
-        print("")
+        print("<br/>")
         selectedItems = getSelectedItemNames(partyItemList=partyItemList)
         print(f"<strong>Selected Items:</strong>{selectedItems}")
+        print("<br/>")
         basePartyCode = calc_base_party_code(partyItemList=partyItemList)
-        print(f"<strong>Base Party Code:</strong>{"&".join(partyItemList)} = {basePartyCode}")
+        print(f"<strong>Base Party Code:</strong>{'&'.join(partyItemList)} = {basePartyCode}")
+        print("<br/>")
         adjustedPartyCode, message, formula = adjust_party_code(basePartyCode=basePartyCode)
         print(f"<strong>Adjusted Code:</strong>{formula} = {adjustedPartyCode}")
+        print("<br/>")
         print(f"<strong>Final Party Code:</strong>{adjustedPartyCode}")
+        print("<br/>")
 
         print(f"<strong>Message:{message}</strong>")
+        print("<br/>")
 
 
 
